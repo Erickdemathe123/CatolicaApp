@@ -111,7 +111,7 @@ class OutraPagina extends StatelessWidget {
 
   final List<String> imageNames = [
     'Agenda',
-    'Disciplinas',
+    'Disciplina',
     'Histórico',
     'Horários',
     'Notas/Faltas',
