@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'nova_pagina.dart';
 import 'proxima_pagina.dart';
@@ -138,9 +139,7 @@ class OutraPagina extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          ProximaPagina()),
+                  MaterialPageRoute(builder: (context) => ProximaPagina()),
                 );
               },
               child: GridTile(
@@ -172,6 +171,7 @@ class OutraPagina extends StatelessWidget {
     );
   }
 }
+
 class ProximaPagina extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -180,11 +180,37 @@ class ProximaPagina extends StatelessWidget {
         title: Text('Escolha seu Período'),
       ),
       body: Container(
-        color: Colors.red,
+        color: Colors.red, // Fundo branco
         child: Center(
-          child: Text(
-            'Esta é a próxima página!',
-            style: TextStyle(fontSize: 20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(height: 20),
+              Container(
+                height: 200,
+                child: CupertinoPicker(
+                  itemExtent: 40,
+                  onSelectedItemChanged: (int index) {
+                    // Faça algo com o valor selecionado
+                    print(index);
+                  },
+                  children: <Widget>[
+                    Text(
+                      '202411 - ENGENHARIA DE SOFTWARE',
+                      style: TextStyle(color: Colors.white), // Texto em branco
+                    ),
+                    Text(
+                      '202323 - ENGENHARIA DE SOFTWARE',
+                      style: TextStyle(color: Colors.white), // Texto em branco
+                    ),
+                    Text(
+                      '202311 - ENGENHARIA DE SOFTWARE',
+                      style: TextStyle(color: Colors.white), // Texto em branco
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
       ),
