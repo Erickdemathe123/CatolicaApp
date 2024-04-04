@@ -106,9 +106,9 @@ class OutraPagina extends StatelessWidget {
     'https://cdn-icons-png.flaticon.com/256/10809/10809407.png',
     'https://cdn-icons-png.flaticon.com/512/6193/6193108.png',
     'https://i.pinimg.com/originals/06/d2/cf/06d2cfa5cd7f8fbe8e94ef5d75496a75.png',
-    'https://images.vexels.com/media/users/3/154004/isolated/lists/87c679dd4d65c4de9e0bc6f63f1b2e4d-icone-de-traco-colorido-do-horario-de-trabalho.png',
+    'https://cdn-icons-png.flaticon.com/512/2038/2038759.png',
     'https://cdn-icons-png.flaticon.com/512/8224/8224599.png',
-    'https://images.vexels.com/media/users/3/153332/isolated/lists/76bc7280d80a81a30a0e33deac7726e5-icone-de-traco-colorido-da-torre-de-sinal.png',
+    'https://images.vexels.com/media/users/3/144050/isolated/preview/4c16ceb88c59a498d6539ef5e60f1fe1-sorteio-de-anthena.png',
   ];
 
   final List<String> imageNames = [
