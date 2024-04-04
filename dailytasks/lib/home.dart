@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'nova_pagina.dart';
+import 'proxima_pagina.dart';
 
 void main() {
   runApp(MaterialApp(
     home: Home(),
+    debugShowCheckedModeBanner: false,
   ));
 }
 
@@ -132,29 +134,58 @@ class OutraPagina extends StatelessWidget {
             crossAxisCount: 2, // Define o número de colunas
           ),
           itemBuilder: (BuildContext context, int index) {
-            return GridTile(
-              child: Column(
-                children: [
-                  Expanded(
-                    child: Image.network(
-                      imageUrls[index],
-                      width: 150,
-                      height: 150,
-                      fit: BoxFit.cover,
+            return GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          ProximaPagina()),
+                );
+              },
+              child: GridTile(
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: Image.network(
+                        imageUrls[index],
+                        width: 150,
+                        height: 150,
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 8), // Espaço entre a imagem e o texto
-                  Text(
-                    imageNames[index],
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
+                    SizedBox(height: 12), // Espaço entre a imagem e o texto
+                    Text(
+                      imageNames[index],
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             );
           },
+        ),
+      ),
+    );
+  }
+}
+class ProximaPagina extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Escolha seu Período'),
+      ),
+      body: Container(
+        color: Colors.red,
+        child: Center(
+          child: Text(
+            'Esta é a próxima página!',
+            style: TextStyle(fontSize: 20),
+          ),
         ),
       ),
     );
