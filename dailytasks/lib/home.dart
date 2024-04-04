@@ -103,12 +103,12 @@ class NovaPagina extends StatelessWidget {
 
 class OutraPagina extends StatelessWidget {
   final List<String> imageUrls = [
-    'https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/calendar-icon.png',
+    'https://cdn-icons-png.flaticon.com/256/10809/10809407.png',
     'https://cdn-icons-png.flaticon.com/512/6193/6193108.png',
     'https://i.pinimg.com/originals/06/d2/cf/06d2cfa5cd7f8fbe8e94ef5d75496a75.png',
-    'https://static.vecteezy.com/system/resources/previews/009/826/879/non_2x/one-o-clock-time-sign-design-icon-free-png.png',
+    'https://images.vexels.com/media/users/3/154004/isolated/lists/87c679dd4d65c4de9e0bc6f63f1b2e4d-icone-de-traco-colorido-do-horario-de-trabalho.png',
     'https://cdn-icons-png.flaticon.com/512/8224/8224599.png',
-    'https://cdn-icons-png.flaticon.com/512/5220/5220627.png',
+    'https://images.vexels.com/media/users/3/153332/isolated/lists/76bc7280d80a81a30a0e33deac7726e5-icone-de-traco-colorido-da-torre-de-sinal.png',
   ];
 
   final List<String> imageNames = [
