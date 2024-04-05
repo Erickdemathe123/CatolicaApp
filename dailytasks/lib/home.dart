@@ -173,6 +173,14 @@ class OutraPagina extends StatelessWidget {
 }
 
 class ProximaPagina extends StatelessWidget {
+  // Lista de nomes de turmas
+  final List<String> turmas = [
+    '202411 - ENGENHARIA DE SOFTWARE',
+    '202323 - ENGENHARIA DE SOFTWARE',
+    '202311 - ENGENHARIA DE SOFTWARE',
+    // Adicione mais turmas conforme necessário
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -181,37 +189,31 @@ class ProximaPagina extends StatelessWidget {
       ),
       body: Container(
         color: Colors.red, // Fundo branco
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(height: 20),
-              Container(
-                height: 200,
-                child: CupertinoPicker(
-                  itemExtent: 40,
-                  onSelectedItemChanged: (int index) {
-                    // Faça algo com o valor selecionado
-                    print(index);
-                  },
-                  children: <Widget>[
-                    Text(
-                      '202411 - ENGENHARIA DE SOFTWARE',
-                      style: TextStyle(color: Colors.white), // Texto em branco
-                    ),
-                    Text(
-                      '202323 - ENGENHARIA DE SOFTWARE',
-                      style: TextStyle(color: Colors.white), // Texto em branco
-                    ),
-                    Text(
-                      '202311 - ENGENHARIA DE SOFTWARE',
-                      style: TextStyle(color: Colors.white), // Texto em branco
-                    ),
-                  ],
-                ),
-              ),
-            ],
+        padding: EdgeInsets.all(16.0),
+        child: GridView.builder(
+          itemCount: turmas.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 1, // Define o número de colunas
+            crossAxisSpacing: 10.0, // Espaçamento entre colunas
+            mainAxisSpacing: 10.0, // Espaçamento entre linhas
+            childAspectRatio: 2.5, // Proporção entre largura e altura dos itens
           ),
+          itemBuilder: (BuildContext context, int index) {
+            return ElevatedButton(
+              onPressed: () {
+                // Ação ao pressionar o botão (pode ser personalizado)
+                print(turmas[index]);
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white, // Cor de fundo do botão
+              ),
+              child: Text(
+                turmas[index],
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.red), // Cor do texto do botão
+              ),
+            );
+          },
         ),
       ),
     );
