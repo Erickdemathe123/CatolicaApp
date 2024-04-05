@@ -188,7 +188,7 @@ class ProximaPagina extends StatelessWidget {
       ),
       body: Container(
         color: Colors.red,
-        padding: EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(30.0),
         child: GridView.builder(
           itemCount: turmas.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -200,7 +200,6 @@ class ProximaPagina extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) {
             return ElevatedButton(
               onPressed: () {
-
                 print(turmas[index]);
               },
               style: ElevatedButton.styleFrom(
@@ -209,7 +208,11 @@ class ProximaPagina extends StatelessWidget {
               child: Text(
                 turmas[index],
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.red),
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             );
           },
