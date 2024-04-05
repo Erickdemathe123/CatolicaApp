@@ -85,7 +85,7 @@ class NovaPagina extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                color: Colors.red, // Cor de fundo da página
+                color: Colors.red,
                 child: Center(
                   child: Image.network(
                     'https://www.catolicasc.org.br/wp-content/uploads/2020/06/ilustracaoes_800x800px_la02-19.png',
@@ -178,7 +178,6 @@ class ProximaPagina extends StatelessWidget {
     '202411 - ENGENHARIA DE SOFTWARE',
     '202323 - ENGENHARIA DE SOFTWARE',
     '202311 - ENGENHARIA DE SOFTWARE',
-    // Adicione mais turmas conforme necessário
   ];
 
   @override
@@ -188,7 +187,7 @@ class ProximaPagina extends StatelessWidget {
         title: Text('Escolha seu Período'),
       ),
       body: Container(
-        color: Colors.red, // Fundo branco
+        color: Colors.red,
         padding: EdgeInsets.all(16.0),
         child: GridView.builder(
           itemCount: turmas.length,
@@ -201,16 +200,16 @@ class ProximaPagina extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) {
             return ElevatedButton(
               onPressed: () {
-                // Ação ao pressionar o botão (pode ser personalizado)
+
                 print(turmas[index]);
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white, // Cor de fundo do botão
+                backgroundColor: Colors.white,
               ),
               child: Text(
                 turmas[index],
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.red), // Cor do texto do botão
+                style: TextStyle(color: Colors.red),
               ),
             );
           },
