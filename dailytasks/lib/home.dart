@@ -173,7 +173,6 @@ class OutraPagina extends StatelessWidget {
 }
 
 class ProximaPagina extends StatelessWidget {
-  // Lista de nomes de turmas
   final List<String> turmas = [
     '202411 - ENGENHARIA DE SOFTWARE',
     '202323 - ENGENHARIA DE SOFTWARE',
@@ -192,15 +191,24 @@ class ProximaPagina extends StatelessWidget {
         child: GridView.builder(
           itemCount: turmas.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 1, // Define o número de colunas
-            crossAxisSpacing: 10.0, // Espaçamento entre colunas
-            mainAxisSpacing: 10.0, // Espaçamento entre linhas
-            childAspectRatio: 2.5, // Proporção entre largura e altura dos itens
+            crossAxisCount: 1,
+            crossAxisSpacing: 10.0,
+            mainAxisSpacing: 10.0,
+            childAspectRatio: 2.5,
           ),
           itemBuilder: (BuildContext context, int index) {
             return ElevatedButton(
               onPressed: () {
-                print(turmas[index]);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DetalhesTurma(
+                      nomeTurma: turmas[index],
+                      notas: [8.5, 8.0, 9.0], // Substitua com as notas reais
+                      faltas: 5, // Substitua com as faltas reais
+                    ),
+                  ),
+                );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
@@ -216,6 +224,71 @@ class ProximaPagina extends StatelessWidget {
               ),
             );
           },
+        ),
+      ),
+    );
+  }
+}
+
+class DetalhesTurma extends StatelessWidget {
+  final String nomeTurma;
+  final List<double> notas;
+  final int faltas;
+
+  DetalhesTurma({required this.nomeTurma, required this.notas, required this.faltas});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Detalhes da Turma'),
+      ),
+      body: Container(
+        color: Colors.red,
+        padding: EdgeInsets.all(30.0),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                nomeTurma,
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 20),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Notas:',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  for (var i = 0; i < notas.length; i++)
+                    Text(
+                      'Nota ${i + 1}: ${notas[i]}',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
+                    ),
+                ],
+              ),
+              SizedBox(height: 10),
+              Text(
+                'Faltas: $faltas',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
