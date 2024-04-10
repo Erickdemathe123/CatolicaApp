@@ -28,7 +28,10 @@ Tela 3
 -Ver Solicitações.
 
 Tela 4
+-Selecionar o período.
 
+Tela 5
+-Ver o Detalhes do que Selecionou 
 
 
 
