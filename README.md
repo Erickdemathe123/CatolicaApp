@@ -6,6 +6,32 @@ Prints do App
 (https://github.com/Erickdemathe123/CatolicaApp/assets/141787110/f093accf-125c-4917-ae27-b928c66e89de)
 (https://github.com/Erickdemathe123/CatolicaApp/assets/141787110/e30b275c-02ac-4e66-aac0-4352249a4f37)
 
+Escopo
+O App do Católica SC serve para ver notas/faltas, ver notícias, ver número da sala, ver dias de aula, olhar seu perfil e muito mais
+
+Tela inicial:
+-Login.
+-Cadastro.
+
+Tela 2
+-Notícias.
+-Avançar para o Menu.
+
+Tela 3
+-Ver Mensagens.
+-Ver Perfil.
+-Ver Agenda.
+-Ver Disciplinas.
+-Ver Históricos.	
+-Ver Horários.
+-Ver Notas/Faltas.
+-Ver Solicitações.
+
+Tela 4
+
+
+
+
 
 
 
