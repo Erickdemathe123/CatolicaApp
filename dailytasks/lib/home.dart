@@ -36,18 +36,6 @@ class Home extends StatelessWidget {
   }
 }
 
-class PaginaComFaixaVermelha extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(''),
-      ),
-      body: NovaPagina(),
-    );
-  }
-}
-
 class NovaPagina extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -67,7 +55,7 @@ class NovaPagina extends StatelessWidget {
         body: Column(
           children: [
             Container(
-              color: Colors.red,
+              color: Color(0xff6b0d0f),
               height: 60,
               // Altura da faixa vermelha
               width: double.infinity,
@@ -85,7 +73,7 @@ class NovaPagina extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                color: Colors.red,
+                color: Color(0xff6b0d0f),
                 child: Center(
                   child: Image.network(
                     'https://www.catolicasc.org.br/wp-content/uploads/2020/06/ilustracaoes_800x800px_la02-19.png',
@@ -104,6 +92,7 @@ class NovaPagina extends StatelessWidget {
 
 class OutraPagina extends StatelessWidget {
   final List<String> imageUrls = [
+    // URLs das imagens
     'https://cdn-icons-png.flaticon.com/256/10809/10809407.png',
     'https://cdn-icons-png.flaticon.com/512/6193/6193108.png',
     'https://i.pinimg.com/originals/06/d2/cf/06d2cfa5cd7f8fbe8e94ef5d75496a75.png',
@@ -113,6 +102,7 @@ class OutraPagina extends StatelessWidget {
   ];
 
   final List<String> imageNames = [
+    // Nomes dos itens do menu
     'Agenda',
     'Disciplina',
     'Históricos',
@@ -128,7 +118,7 @@ class OutraPagina extends StatelessWidget {
         title: Text('Menu'),
       ),
       body: Container(
-        color: Colors.redAccent,
+        color: Color(0xff6b0d0f),
         child: GridView.builder(
           itemCount: imageUrls.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -137,6 +127,8 @@ class OutraPagina extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) {
             return GestureDetector(
               onTap: () {
+                // Ação a ser realizada quando um item do menu for clicado
+                // Neste exemplo, navega para uma nova página
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => ProximaPagina()),
@@ -159,6 +151,7 @@ class OutraPagina extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
+                        color: Colors.white,
                       ),
                     ),
                   ],
@@ -186,7 +179,7 @@ class ProximaPagina extends StatelessWidget {
         title: Text('Escolha seu Período'),
       ),
       body: Container(
-        color: Colors.red,
+        color: Color(0xff6b0d0f),
         padding: EdgeInsets.all(30.0),
         child: GridView.builder(
           itemCount: turmas.length,
@@ -217,7 +210,7 @@ class ProximaPagina extends StatelessWidget {
                 turmas[index],
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Colors.red,
+                  color: Color(0xff6b0d0f),
                   fontSize: 26,
                   fontWeight: FontWeight.bold,
                 ),
@@ -244,7 +237,7 @@ class DetalhesTurma extends StatelessWidget {
         title: Text('Detalhes da Turma'),
       ),
       body: Container(
-        color: Colors.red,
+        color: Color(0xff6b0d0f),
         padding: EdgeInsets.all(30.0),
         child: Center(
           child: Column(
