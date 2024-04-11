@@ -51,6 +51,8 @@ class NovaPagina extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text('Home'),
+            backgroundColor: Color(0xff6b0d0f)
+
         ),
         body: Column(
           children: [
@@ -116,6 +118,7 @@ class OutraPagina extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Menu'),
+          backgroundColor: Color(0xff6b0d0f)
       ),
       body: Container(
         color: Color(0xff6b0d0f),
@@ -177,6 +180,7 @@ class ProximaPagina extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Escolha seu Período'),
+        backgroundColor: Color(0xff6b0d0f),
       ),
       body: Container(
         color: Color(0xff6b0d0f),
@@ -235,6 +239,7 @@ class DetalhesTurma extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Detalhes da Turma'),
+          backgroundColor: Color(0xff6b0d0f),
       ),
       body: Container(
         color: Color(0xff6b0d0f),
