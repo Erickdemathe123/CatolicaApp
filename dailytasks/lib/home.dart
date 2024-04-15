@@ -35,7 +35,6 @@ class Home extends StatelessWidget {
     );
   }
 }
-
 class NovaPagina extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -43,25 +42,23 @@ class NovaPagina extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(
-              builder: (context) =>
-                  OutraPagina()), // Navegue para a outra página
+          MaterialPageRoute(builder: (context) => OutraPagina()),
         );
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Home'),
-            backgroundColor: Color(0xff6b0d0f)
-
+          title: Text(
+            'Home',
+            style: TextStyle(color: Colors.white), // Cor do texto
+          ),
+          backgroundColor: Color(0xff6b0d0f),
         ),
         body: Column(
           children: [
             Container(
               color: Color(0xff6b0d0f),
               height: 60,
-              // Altura da faixa vermelha
               width: double.infinity,
-              // Largura da faixa igual à largura da tela
               child: Center(
                 child: Text(
                   'Catolica SC',
@@ -79,8 +76,8 @@ class NovaPagina extends StatelessWidget {
                 child: Center(
                   child: Image.network(
                     'https://www.catolicasc.org.br/wp-content/uploads/2020/06/ilustracaoes_800x800px_la02-19.png',
-                    width: 300, // Largura da imagem
-                    height: 900, // Altura da imagem
+                    width: 300,
+                    height: 900,
                   ),
                 ),
               ),
@@ -91,6 +88,7 @@ class NovaPagina extends StatelessWidget {
     );
   }
 }
+
 
 class OutraPagina extends StatelessWidget {
   final List<String> imageUrls = [
@@ -117,7 +115,10 @@ class OutraPagina extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Menu'),
+          title: Text(
+            'Menu',
+            style: TextStyle(color: Colors.white), // Cor do texto
+          ),
           backgroundColor: Color(0xff6b0d0f)
       ),
       body: Container(
@@ -179,7 +180,10 @@ class ProximaPagina extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Escolha seu Período'),
+        title: Text(
+          'Escolha um Período',
+          style: TextStyle(color: Colors.white), // Cor do texto
+        ),
         backgroundColor: Color(0xff6b0d0f),
       ),
       body: Container(
@@ -238,7 +242,10 @@ class DetalhesTurma extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detalhes da Turma'),
+        title: Text(
+          'Detalhes da Turma',
+          style: TextStyle(color: Colors.white), // Cor do texto
+        ),
           backgroundColor: Color(0xff6b0d0f),
       ),
       body: Container(
