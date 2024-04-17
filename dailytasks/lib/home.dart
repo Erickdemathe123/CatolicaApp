@@ -49,9 +49,10 @@ class NovaPagina extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             'Home',
-            style: TextStyle(color: Colors.white), // Cor do texto
+            style: TextStyle(color: Colors.white),
           ),
           backgroundColor: Color(0xff6b0d0f),
+          iconTheme: IconThemeData(color: Colors.white), // Definindo a cor do ícone de voltar
         ),
         body: Column(
           children: [
@@ -115,11 +116,12 @@ class OutraPagina extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text(
-            'Menu',
-            style: TextStyle(color: Colors.white), // Cor do texto
-          ),
-          backgroundColor: Color(0xff6b0d0f)
+        title: Text(
+          'Menu',
+          style: TextStyle(color: Colors.white), // Cor do texto
+        ),
+        backgroundColor: Color(0xff6b0d0f),
+        iconTheme: IconThemeData(color: Colors.white), // Definindo a cor do ícone de voltar
       ),
       body: Container(
         color: Color(0xff6b0d0f),
@@ -185,6 +187,7 @@ class ProximaPagina extends StatelessWidget {
           style: TextStyle(color: Colors.white), // Cor do texto
         ),
         backgroundColor: Color(0xff6b0d0f),
+        iconTheme: IconThemeData(color: Colors.white), // Definindo a cor do ícone de voltar
       ),
       body: Container(
         color: Color(0xff6b0d0f),
@@ -247,6 +250,7 @@ class DetalhesTurma extends StatelessWidget {
           style: TextStyle(color: Colors.white), // Cor do texto
         ),
           backgroundColor: Color(0xff6b0d0f),
+          iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Container(
         color: Color(0xff6b0d0f),
